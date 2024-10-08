@@ -1,5 +1,5 @@
 - name: Gathering System Info
-  hosts: cisservergroup
+  hosts: # insert host here after making an inventory file
   tasks:
   - name: Print Hostname
     ansible.builtin.debug:
