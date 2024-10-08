@@ -28,3 +28,7 @@
   - name: Print Number of Processor Cores
     ansible.builtin.debug:
       var: ansible_facts['processor_cores']
+
+  - name: Print Date
+    ansible.builtin.debug:
+      var: ansible_facts['date_time']['date']
