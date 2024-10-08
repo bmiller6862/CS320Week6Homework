@@ -1,0 +1,30 @@
+- name: Gathering System Info
+  hosts: cisservergroup
+  tasks:
+  - name: Print Hostname
+    ansible.builtin.debug:
+      var: ansible_facts['hostname']
+
+  - name: Print IP Address
+    ansible.builtin.debug:
+      var: ansible_facts['default_ipv4']['address']
+
+  - name: Print Distribution
+    ansible.builtin.debug:
+      var: ansible_facts['distribution']
+
+  - name: Print Distribution File Type
+    ansible.builtin.debug:
+      var: ansible_facts['distribution_file_variety']
+
+  - name: Print Disk Size
+    ansible.builtin.debug:
+      var: ansible_facts['devices']['dm-0']['size']
+
+  - name: Print Memory
+    ansible.builtin.debug:
+      var: ansible_facts['memtotal_mb']
+
+  - name: Print Number of Processor Cores
+    ansible.builtin.debug:
+      var: ansible_facts['processor_cores']
